@@ -1,0 +1,4 @@
+/share/lidar2camera/joint_calib/tool/LidarCircleDetect/build/CMakeFiles/rebuild_cache.dir
+/share/lidar2camera/joint_calib/tool/LidarCircleDetect/build/CMakeFiles/edit_cache.dir
+/share/lidar2camera/joint_calib/tool/LidarCircleDetect/build/CMakeFiles/run_lidardetection.dir
+/share/lidar2camera/joint_calib/tool/LidarCircleDetect/build/CMakeFiles/lidar2camera.dir

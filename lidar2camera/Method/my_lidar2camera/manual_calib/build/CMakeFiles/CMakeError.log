@@ -1,0 +1,3032 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_1697e/fast && /usr/bin/make  -f CMakeFiles/cmTC_1697e.dir/build.make CMakeFiles/cmTC_1697e.dir/build
+make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1697e.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_1697e.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_1697e
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1697e.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_1697e.dir/src.c.o -o cmTC_1697e 
+CMakeFiles/cmTC_1697e.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_1697e.dir/build.make:98: recipe for target 'cmTC_1697e' failed
+make[1]: *** [cmTC_1697e] Error 1
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_1697e/fast' failed
+make: *** [cmTC_1697e/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_1d42a/fast && /usr/bin/make  -f CMakeFiles/cmTC_1d42a.dir/build.make CMakeFiles/cmTC_1d42a.dir/build
+make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1d42a.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_1d42a.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_1d42a
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1d42a.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_1d42a.dir/CheckFunctionExists.c.o -o cmTC_1d42a  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_1d42a.dir/build.make:98: recipe for target 'cmTC_1d42a' failed
+make[1]: *** [cmTC_1d42a] Error 1
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_1d42a/fast' failed
+make: *** [cmTC_1d42a/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_fb2e9/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_fb2e9.dir/build.make CMakeFiles/cmTC_fb2e9.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fb2e9.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_fb2e9.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_fb2e9
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fb2e9.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_fb2e9.dir/src.c.o -o cmTC_fb2e9 
+CMakeFiles/cmTC_fb2e9.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_fb2e9.dir/build.make:98: recipe for target 'cmTC_fb2e9' failed
+make[2]: *** [cmTC_fb2e9] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_fb2e9/fast' failed
+make[1]: *** [cmTC_fb2e9/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_3ca82/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_3ca82.dir/build.make CMakeFiles/cmTC_3ca82.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3ca82.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_3ca82.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_3ca82
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3ca82.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_3ca82.dir/CheckFunctionExists.c.o -o cmTC_3ca82  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_3ca82.dir/build.make:98: recipe for target 'cmTC_3ca82' failed
+make[2]: *** [cmTC_3ca82] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_3ca82/fast' failed
+make[1]: *** [cmTC_3ca82/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_ce1fb/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_ce1fb.dir/build.make CMakeFiles/cmTC_ce1fb.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ce1fb.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_ce1fb.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_ce1fb
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ce1fb.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_ce1fb.dir/src.c.o -o cmTC_ce1fb 
+CMakeFiles/cmTC_ce1fb.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_ce1fb.dir/build.make:98: recipe for target 'cmTC_ce1fb' failed
+make[2]: *** [cmTC_ce1fb] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_ce1fb/fast' failed
+make[1]: *** [cmTC_ce1fb/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_ce9ac/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_ce9ac.dir/build.make CMakeFiles/cmTC_ce9ac.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ce9ac.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_ce9ac.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ce9ac
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ce9ac.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_ce9ac.dir/CheckFunctionExists.c.o -o cmTC_ce9ac  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_ce9ac.dir/build.make:98: recipe for target 'cmTC_ce9ac' failed
+make[2]: *** [cmTC_ce9ac] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_ce9ac/fast' failed
+make[1]: *** [cmTC_ce9ac/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_6c967/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_6c967.dir/build.make CMakeFiles/cmTC_6c967.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6c967.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_6c967.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_6c967
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6c967.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_6c967.dir/src.c.o -o cmTC_6c967 
+CMakeFiles/cmTC_6c967.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_6c967.dir/build.make:98: recipe for target 'cmTC_6c967' failed
+make[2]: *** [cmTC_6c967] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_6c967/fast' failed
+make[1]: *** [cmTC_6c967/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_c8239/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_c8239.dir/build.make CMakeFiles/cmTC_c8239.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c8239.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_c8239.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c8239
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c8239.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_c8239.dir/CheckFunctionExists.c.o -o cmTC_c8239  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_c8239.dir/build.make:98: recipe for target 'cmTC_c8239' failed
+make[2]: *** [cmTC_c8239] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_c8239/fast' failed
+make[1]: *** [cmTC_c8239/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_25bbd/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_25bbd.dir/build.make CMakeFiles/cmTC_25bbd.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_25bbd.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_25bbd.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_25bbd
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_25bbd.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_25bbd.dir/src.c.o -o cmTC_25bbd 
+CMakeFiles/cmTC_25bbd.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_25bbd.dir/build.make:98: recipe for target 'cmTC_25bbd' failed
+make[2]: *** [cmTC_25bbd] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_25bbd/fast' failed
+make[1]: *** [cmTC_25bbd/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_59cdb/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_59cdb.dir/build.make CMakeFiles/cmTC_59cdb.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_59cdb.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_59cdb.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_59cdb
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_59cdb.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_59cdb.dir/CheckFunctionExists.c.o -o cmTC_59cdb  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_59cdb.dir/build.make:98: recipe for target 'cmTC_59cdb' failed
+make[2]: *** [cmTC_59cdb] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_59cdb/fast' failed
+make[1]: *** [cmTC_59cdb/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_a9664/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_a9664.dir/build.make CMakeFiles/cmTC_a9664.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a9664.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_a9664.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_a9664
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a9664.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_a9664.dir/src.c.o -o cmTC_a9664 
+CMakeFiles/cmTC_a9664.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_a9664.dir/build.make:98: recipe for target 'cmTC_a9664' failed
+make[2]: *** [cmTC_a9664] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_a9664/fast' failed
+make[1]: *** [cmTC_a9664/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_d3da4/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_d3da4.dir/build.make CMakeFiles/cmTC_d3da4.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d3da4.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_d3da4.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_d3da4
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d3da4.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_d3da4.dir/CheckFunctionExists.c.o -o cmTC_d3da4  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_d3da4.dir/build.make:98: recipe for target 'cmTC_d3da4' failed
+make[2]: *** [cmTC_d3da4] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_d3da4/fast' failed
+make[1]: *** [cmTC_d3da4/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_f71cf/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_f71cf.dir/build.make CMakeFiles/cmTC_f71cf.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f71cf.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_f71cf.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_f71cf
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f71cf.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_f71cf.dir/src.c.o -o cmTC_f71cf 
+CMakeFiles/cmTC_f71cf.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_f71cf.dir/build.make:98: recipe for target 'cmTC_f71cf' failed
+make[2]: *** [cmTC_f71cf] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_f71cf/fast' failed
+make[1]: *** [cmTC_f71cf/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_65ac9/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_65ac9.dir/build.make CMakeFiles/cmTC_65ac9.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_65ac9.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_65ac9.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_65ac9
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_65ac9.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_65ac9.dir/CheckFunctionExists.c.o -o cmTC_65ac9  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_65ac9.dir/build.make:98: recipe for target 'cmTC_65ac9' failed
+make[2]: *** [cmTC_65ac9] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_65ac9/fast' failed
+make[1]: *** [cmTC_65ac9/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_4be2d/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_4be2d.dir/build.make CMakeFiles/cmTC_4be2d.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4be2d.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_4be2d.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_4be2d
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4be2d.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_4be2d.dir/src.c.o -o cmTC_4be2d 
+CMakeFiles/cmTC_4be2d.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_4be2d.dir/build.make:98: recipe for target 'cmTC_4be2d' failed
+make[2]: *** [cmTC_4be2d] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_4be2d/fast' failed
+make[1]: *** [cmTC_4be2d/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_f2a72/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_f2a72.dir/build.make CMakeFiles/cmTC_f2a72.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f2a72.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_f2a72.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_f2a72
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f2a72.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_f2a72.dir/CheckFunctionExists.c.o -o cmTC_f2a72  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_f2a72.dir/build.make:98: recipe for target 'cmTC_f2a72' failed
+make[2]: *** [cmTC_f2a72] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_f2a72/fast' failed
+make[1]: *** [cmTC_f2a72/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_14e8b/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_14e8b.dir/build.make CMakeFiles/cmTC_14e8b.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_14e8b.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_14e8b.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_14e8b
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_14e8b.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_14e8b.dir/src.c.o -o cmTC_14e8b 
+CMakeFiles/cmTC_14e8b.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_14e8b.dir/build.make:98: recipe for target 'cmTC_14e8b' failed
+make[2]: *** [cmTC_14e8b] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_14e8b/fast' failed
+make[1]: *** [cmTC_14e8b/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_b84b4/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_b84b4.dir/build.make CMakeFiles/cmTC_b84b4.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b84b4.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_b84b4.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_b84b4
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b84b4.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_b84b4.dir/CheckFunctionExists.c.o -o cmTC_b84b4  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_b84b4.dir/build.make:98: recipe for target 'cmTC_b84b4' failed
+make[2]: *** [cmTC_b84b4] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_b84b4/fast' failed
+make[1]: *** [cmTC_b84b4/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_6f0d9/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_6f0d9.dir/build.make CMakeFiles/cmTC_6f0d9.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6f0d9.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_6f0d9.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_6f0d9
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6f0d9.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_6f0d9.dir/src.c.o -o cmTC_6f0d9 
+CMakeFiles/cmTC_6f0d9.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_6f0d9.dir/build.make:98: recipe for target 'cmTC_6f0d9' failed
+make[2]: *** [cmTC_6f0d9] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_6f0d9/fast' failed
+make[1]: *** [cmTC_6f0d9/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_77960/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_77960.dir/build.make CMakeFiles/cmTC_77960.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_77960.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_77960.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_77960
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_77960.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_77960.dir/CheckFunctionExists.c.o -o cmTC_77960  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_77960.dir/build.make:98: recipe for target 'cmTC_77960' failed
+make[2]: *** [cmTC_77960] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_77960/fast' failed
+make[1]: *** [cmTC_77960/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_11f34/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_11f34.dir/build.make CMakeFiles/cmTC_11f34.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_11f34.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_11f34.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_11f34
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_11f34.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_11f34.dir/src.c.o -o cmTC_11f34 
+CMakeFiles/cmTC_11f34.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_11f34.dir/build.make:98: recipe for target 'cmTC_11f34' failed
+make[2]: *** [cmTC_11f34] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_11f34/fast' failed
+make[1]: *** [cmTC_11f34/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_08f39/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_08f39.dir/build.make CMakeFiles/cmTC_08f39.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_08f39.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_08f39.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_08f39
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_08f39.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_08f39.dir/CheckFunctionExists.c.o -o cmTC_08f39  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_08f39.dir/build.make:98: recipe for target 'cmTC_08f39' failed
+make[2]: *** [cmTC_08f39] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_08f39/fast' failed
+make[1]: *** [cmTC_08f39/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_d415e/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_d415e.dir/build.make CMakeFiles/cmTC_d415e.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d415e.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_d415e.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_d415e
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d415e.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_d415e.dir/src.c.o -o cmTC_d415e 
+CMakeFiles/cmTC_d415e.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_d415e.dir/build.make:98: recipe for target 'cmTC_d415e' failed
+make[2]: *** [cmTC_d415e] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_d415e/fast' failed
+make[1]: *** [cmTC_d415e/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_68383/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_68383.dir/build.make CMakeFiles/cmTC_68383.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_68383.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_68383.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_68383
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_68383.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_68383.dir/CheckFunctionExists.c.o -o cmTC_68383  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_68383.dir/build.make:98: recipe for target 'cmTC_68383' failed
+make[2]: *** [cmTC_68383] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_68383/fast' failed
+make[1]: *** [cmTC_68383/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_15ab9/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_15ab9.dir/build.make CMakeFiles/cmTC_15ab9.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_15ab9.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_15ab9.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_15ab9
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_15ab9.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_15ab9.dir/src.c.o -o cmTC_15ab9 
+CMakeFiles/cmTC_15ab9.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_15ab9.dir/build.make:98: recipe for target 'cmTC_15ab9' failed
+make[2]: *** [cmTC_15ab9] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_15ab9/fast' failed
+make[1]: *** [cmTC_15ab9/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_3a4f6/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_3a4f6.dir/build.make CMakeFiles/cmTC_3a4f6.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3a4f6.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_3a4f6.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_3a4f6
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3a4f6.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_3a4f6.dir/CheckFunctionExists.c.o -o cmTC_3a4f6  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_3a4f6.dir/build.make:98: recipe for target 'cmTC_3a4f6' failed
+make[2]: *** [cmTC_3a4f6] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_3a4f6/fast' failed
+make[1]: *** [cmTC_3a4f6/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_3e520/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_3e520.dir/build.make CMakeFiles/cmTC_3e520.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3e520.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_3e520.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_3e520
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3e520.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_3e520.dir/src.c.o -o cmTC_3e520 
+CMakeFiles/cmTC_3e520.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_3e520.dir/build.make:98: recipe for target 'cmTC_3e520' failed
+make[2]: *** [cmTC_3e520] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_3e520/fast' failed
+make[1]: *** [cmTC_3e520/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_8bfcb/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_8bfcb.dir/build.make CMakeFiles/cmTC_8bfcb.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8bfcb.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_8bfcb.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_8bfcb
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8bfcb.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_8bfcb.dir/CheckFunctionExists.c.o -o cmTC_8bfcb  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_8bfcb.dir/build.make:98: recipe for target 'cmTC_8bfcb' failed
+make[2]: *** [cmTC_8bfcb] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_8bfcb/fast' failed
+make[1]: *** [cmTC_8bfcb/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_b44db/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_b44db.dir/build.make CMakeFiles/cmTC_b44db.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b44db.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_b44db.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_b44db
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b44db.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_b44db.dir/src.c.o -o cmTC_b44db 
+CMakeFiles/cmTC_b44db.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_b44db.dir/build.make:98: recipe for target 'cmTC_b44db' failed
+make[2]: *** [cmTC_b44db] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_b44db/fast' failed
+make[1]: *** [cmTC_b44db/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_3071a/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_3071a.dir/build.make CMakeFiles/cmTC_3071a.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3071a.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_3071a.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_3071a
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3071a.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_3071a.dir/CheckFunctionExists.c.o -o cmTC_3071a  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_3071a.dir/build.make:98: recipe for target 'cmTC_3071a' failed
+make[2]: *** [cmTC_3071a] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_3071a/fast' failed
+make[1]: *** [cmTC_3071a/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_813af/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_813af.dir/build.make CMakeFiles/cmTC_813af.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_813af.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_813af.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_813af
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_813af.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_813af.dir/src.c.o -o cmTC_813af 
+CMakeFiles/cmTC_813af.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_813af.dir/build.make:98: recipe for target 'cmTC_813af' failed
+make[2]: *** [cmTC_813af] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_813af/fast' failed
+make[1]: *** [cmTC_813af/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_5c9aa/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_5c9aa.dir/build.make CMakeFiles/cmTC_5c9aa.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5c9aa.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_5c9aa.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_5c9aa
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5c9aa.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_5c9aa.dir/CheckFunctionExists.c.o -o cmTC_5c9aa  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_5c9aa.dir/build.make:98: recipe for target 'cmTC_5c9aa' failed
+make[2]: *** [cmTC_5c9aa] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_5c9aa/fast' failed
+make[1]: *** [cmTC_5c9aa/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_2cff2/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_2cff2.dir/build.make CMakeFiles/cmTC_2cff2.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2cff2.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_2cff2.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_2cff2
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2cff2.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_2cff2.dir/src.c.o -o cmTC_2cff2 
+CMakeFiles/cmTC_2cff2.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_2cff2.dir/build.make:98: recipe for target 'cmTC_2cff2' failed
+make[2]: *** [cmTC_2cff2] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_2cff2/fast' failed
+make[1]: *** [cmTC_2cff2/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_9c659/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_9c659.dir/build.make CMakeFiles/cmTC_9c659.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9c659.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_9c659.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_9c659
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9c659.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_9c659.dir/CheckFunctionExists.c.o -o cmTC_9c659  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_9c659.dir/build.make:98: recipe for target 'cmTC_9c659' failed
+make[2]: *** [cmTC_9c659] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_9c659/fast' failed
+make[1]: *** [cmTC_9c659/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_a9a7e/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_a9a7e.dir/build.make CMakeFiles/cmTC_a9a7e.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a9a7e.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_a9a7e.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_a9a7e
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a9a7e.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_a9a7e.dir/src.c.o -o cmTC_a9a7e 
+CMakeFiles/cmTC_a9a7e.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_a9a7e.dir/build.make:98: recipe for target 'cmTC_a9a7e' failed
+make[2]: *** [cmTC_a9a7e] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_a9a7e/fast' failed
+make[1]: *** [cmTC_a9a7e/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_a78ea/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_a78ea.dir/build.make CMakeFiles/cmTC_a78ea.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a78ea.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_a78ea.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a78ea
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a78ea.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_a78ea.dir/CheckFunctionExists.c.o -o cmTC_a78ea  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_a78ea.dir/build.make:98: recipe for target 'cmTC_a78ea' failed
+make[2]: *** [cmTC_a78ea] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_a78ea/fast' failed
+make[1]: *** [cmTC_a78ea/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_b4b6c/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_b4b6c.dir/build.make CMakeFiles/cmTC_b4b6c.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b4b6c.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_b4b6c.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_b4b6c
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b4b6c.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_b4b6c.dir/src.c.o -o cmTC_b4b6c 
+CMakeFiles/cmTC_b4b6c.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_b4b6c.dir/build.make:98: recipe for target 'cmTC_b4b6c' failed
+make[2]: *** [cmTC_b4b6c] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_b4b6c/fast' failed
+make[1]: *** [cmTC_b4b6c/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_f25bd/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_f25bd.dir/build.make CMakeFiles/cmTC_f25bd.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f25bd.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_f25bd.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_f25bd
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f25bd.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_f25bd.dir/CheckFunctionExists.c.o -o cmTC_f25bd  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_f25bd.dir/build.make:98: recipe for target 'cmTC_f25bd' failed
+make[2]: *** [cmTC_f25bd] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_f25bd/fast' failed
+make[1]: *** [cmTC_f25bd/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_23673/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_23673.dir/build.make CMakeFiles/cmTC_23673.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_23673.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_23673.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_23673
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_23673.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_23673.dir/src.c.o -o cmTC_23673 
+CMakeFiles/cmTC_23673.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_23673.dir/build.make:98: recipe for target 'cmTC_23673' failed
+make[2]: *** [cmTC_23673] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_23673/fast' failed
+make[1]: *** [cmTC_23673/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_d1beb/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_d1beb.dir/build.make CMakeFiles/cmTC_d1beb.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d1beb.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_d1beb.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_d1beb
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d1beb.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_d1beb.dir/CheckFunctionExists.c.o -o cmTC_d1beb  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_d1beb.dir/build.make:98: recipe for target 'cmTC_d1beb' failed
+make[2]: *** [cmTC_d1beb] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_d1beb/fast' failed
+make[1]: *** [cmTC_d1beb/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_1d8b3/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_1d8b3.dir/build.make CMakeFiles/cmTC_1d8b3.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1d8b3.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_1d8b3.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_1d8b3
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1d8b3.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_1d8b3.dir/src.c.o -o cmTC_1d8b3 
+CMakeFiles/cmTC_1d8b3.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_1d8b3.dir/build.make:98: recipe for target 'cmTC_1d8b3' failed
+make[2]: *** [cmTC_1d8b3] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_1d8b3/fast' failed
+make[1]: *** [cmTC_1d8b3/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_21770/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_21770.dir/build.make CMakeFiles/cmTC_21770.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_21770.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_21770.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_21770
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_21770.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_21770.dir/CheckFunctionExists.c.o -o cmTC_21770  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_21770.dir/build.make:98: recipe for target 'cmTC_21770' failed
+make[2]: *** [cmTC_21770] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_21770/fast' failed
+make[1]: *** [cmTC_21770/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_959cc/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_959cc.dir/build.make CMakeFiles/cmTC_959cc.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_959cc.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_959cc.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_959cc
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_959cc.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_959cc.dir/src.c.o -o cmTC_959cc 
+CMakeFiles/cmTC_959cc.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_959cc.dir/build.make:98: recipe for target 'cmTC_959cc' failed
+make[2]: *** [cmTC_959cc] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_959cc/fast' failed
+make[1]: *** [cmTC_959cc/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_37663/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_37663.dir/build.make CMakeFiles/cmTC_37663.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_37663.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_37663.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_37663
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_37663.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_37663.dir/CheckFunctionExists.c.o -o cmTC_37663  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_37663.dir/build.make:98: recipe for target 'cmTC_37663' failed
+make[2]: *** [cmTC_37663] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_37663/fast' failed
+make[1]: *** [cmTC_37663/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_65ad2/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_65ad2.dir/build.make CMakeFiles/cmTC_65ad2.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_65ad2.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_65ad2.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_65ad2
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_65ad2.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_65ad2.dir/src.c.o -o cmTC_65ad2 
+CMakeFiles/cmTC_65ad2.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_65ad2.dir/build.make:98: recipe for target 'cmTC_65ad2' failed
+make[2]: *** [cmTC_65ad2] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_65ad2/fast' failed
+make[1]: *** [cmTC_65ad2/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_59ac1/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_59ac1.dir/build.make CMakeFiles/cmTC_59ac1.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_59ac1.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_59ac1.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_59ac1
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_59ac1.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_59ac1.dir/CheckFunctionExists.c.o -o cmTC_59ac1  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_59ac1.dir/build.make:98: recipe for target 'cmTC_59ac1' failed
+make[2]: *** [cmTC_59ac1] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_59ac1/fast' failed
+make[1]: *** [cmTC_59ac1/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_672cf/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_672cf.dir/build.make CMakeFiles/cmTC_672cf.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_672cf.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_672cf.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_672cf
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_672cf.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_672cf.dir/src.c.o -o cmTC_672cf 
+CMakeFiles/cmTC_672cf.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_672cf.dir/build.make:98: recipe for target 'cmTC_672cf' failed
+make[2]: *** [cmTC_672cf] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_672cf/fast' failed
+make[1]: *** [cmTC_672cf/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_0d219/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_0d219.dir/build.make CMakeFiles/cmTC_0d219.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0d219.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_0d219.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_0d219
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0d219.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_0d219.dir/CheckFunctionExists.c.o -o cmTC_0d219  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_0d219.dir/build.make:98: recipe for target 'cmTC_0d219' failed
+make[2]: *** [cmTC_0d219] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_0d219/fast' failed
+make[1]: *** [cmTC_0d219/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_ddbaa/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_ddbaa.dir/build.make CMakeFiles/cmTC_ddbaa.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ddbaa.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_ddbaa.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_ddbaa
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ddbaa.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_ddbaa.dir/src.c.o -o cmTC_ddbaa 
+CMakeFiles/cmTC_ddbaa.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_ddbaa.dir/build.make:98: recipe for target 'cmTC_ddbaa' failed
+make[2]: *** [cmTC_ddbaa] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_ddbaa/fast' failed
+make[1]: *** [cmTC_ddbaa/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_c6f61/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_c6f61.dir/build.make CMakeFiles/cmTC_c6f61.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c6f61.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_c6f61.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c6f61
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c6f61.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_c6f61.dir/CheckFunctionExists.c.o -o cmTC_c6f61  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_c6f61.dir/build.make:98: recipe for target 'cmTC_c6f61' failed
+make[2]: *** [cmTC_c6f61] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_c6f61/fast' failed
+make[1]: *** [cmTC_c6f61/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_34fae/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_34fae.dir/build.make CMakeFiles/cmTC_34fae.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_34fae.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_34fae.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_34fae
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_34fae.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_34fae.dir/src.c.o -o cmTC_34fae 
+CMakeFiles/cmTC_34fae.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_34fae.dir/build.make:98: recipe for target 'cmTC_34fae' failed
+make[2]: *** [cmTC_34fae] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_34fae/fast' failed
+make[1]: *** [cmTC_34fae/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_c73f1/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_c73f1.dir/build.make CMakeFiles/cmTC_c73f1.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c73f1.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_c73f1.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c73f1
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c73f1.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_c73f1.dir/CheckFunctionExists.c.o -o cmTC_c73f1  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_c73f1.dir/build.make:98: recipe for target 'cmTC_c73f1' failed
+make[2]: *** [cmTC_c73f1] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_c73f1/fast' failed
+make[1]: *** [cmTC_c73f1/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_7a110/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_7a110.dir/build.make CMakeFiles/cmTC_7a110.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7a110.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_7a110.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_7a110
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7a110.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_7a110.dir/src.c.o -o cmTC_7a110 
+CMakeFiles/cmTC_7a110.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_7a110.dir/build.make:98: recipe for target 'cmTC_7a110' failed
+make[2]: *** [cmTC_7a110] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_7a110/fast' failed
+make[1]: *** [cmTC_7a110/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_56902/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_56902.dir/build.make CMakeFiles/cmTC_56902.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_56902.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_56902.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_56902
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_56902.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_56902.dir/CheckFunctionExists.c.o -o cmTC_56902  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_56902.dir/build.make:98: recipe for target 'cmTC_56902' failed
+make[2]: *** [cmTC_56902] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_56902/fast' failed
+make[1]: *** [cmTC_56902/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_a1a7d/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_a1a7d.dir/build.make CMakeFiles/cmTC_a1a7d.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a1a7d.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_a1a7d.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_a1a7d
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a1a7d.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_a1a7d.dir/src.c.o -o cmTC_a1a7d 
+CMakeFiles/cmTC_a1a7d.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_a1a7d.dir/build.make:98: recipe for target 'cmTC_a1a7d' failed
+make[2]: *** [cmTC_a1a7d] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_a1a7d/fast' failed
+make[1]: *** [cmTC_a1a7d/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_ec006/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_ec006.dir/build.make CMakeFiles/cmTC_ec006.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ec006.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_ec006.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ec006
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ec006.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_ec006.dir/CheckFunctionExists.c.o -o cmTC_ec006  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_ec006.dir/build.make:98: recipe for target 'cmTC_ec006' failed
+make[2]: *** [cmTC_ec006] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_ec006/fast' failed
+make[1]: *** [cmTC_ec006/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_0f2c8/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_0f2c8.dir/build.make CMakeFiles/cmTC_0f2c8.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0f2c8.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_0f2c8.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_0f2c8
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0f2c8.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_0f2c8.dir/src.c.o -o cmTC_0f2c8 
+CMakeFiles/cmTC_0f2c8.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_0f2c8.dir/build.make:98: recipe for target 'cmTC_0f2c8' failed
+make[2]: *** [cmTC_0f2c8] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_0f2c8/fast' failed
+make[1]: *** [cmTC_0f2c8/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_84c0d/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_84c0d.dir/build.make CMakeFiles/cmTC_84c0d.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_84c0d.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_84c0d.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_84c0d
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_84c0d.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_84c0d.dir/CheckFunctionExists.c.o -o cmTC_84c0d  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_84c0d.dir/build.make:98: recipe for target 'cmTC_84c0d' failed
+make[2]: *** [cmTC_84c0d] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_84c0d/fast' failed
+make[1]: *** [cmTC_84c0d/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_f5837/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_f5837.dir/build.make CMakeFiles/cmTC_f5837.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f5837.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_f5837.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_f5837
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f5837.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_f5837.dir/src.c.o -o cmTC_f5837 
+CMakeFiles/cmTC_f5837.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_f5837.dir/build.make:98: recipe for target 'cmTC_f5837' failed
+make[2]: *** [cmTC_f5837] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_f5837/fast' failed
+make[1]: *** [cmTC_f5837/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_5c3a0/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_5c3a0.dir/build.make CMakeFiles/cmTC_5c3a0.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5c3a0.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_5c3a0.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_5c3a0
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5c3a0.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_5c3a0.dir/CheckFunctionExists.c.o -o cmTC_5c3a0  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_5c3a0.dir/build.make:98: recipe for target 'cmTC_5c3a0' failed
+make[2]: *** [cmTC_5c3a0] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_5c3a0/fast' failed
+make[1]: *** [cmTC_5c3a0/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_bf06e/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_bf06e.dir/build.make CMakeFiles/cmTC_bf06e.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bf06e.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_bf06e.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_bf06e
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bf06e.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_bf06e.dir/src.c.o -o cmTC_bf06e 
+CMakeFiles/cmTC_bf06e.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_bf06e.dir/build.make:98: recipe for target 'cmTC_bf06e' failed
+make[2]: *** [cmTC_bf06e] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_bf06e/fast' failed
+make[1]: *** [cmTC_bf06e/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_bca9c/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_bca9c.dir/build.make CMakeFiles/cmTC_bca9c.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bca9c.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_bca9c.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_bca9c
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bca9c.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_bca9c.dir/CheckFunctionExists.c.o -o cmTC_bca9c  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_bca9c.dir/build.make:98: recipe for target 'cmTC_bca9c' failed
+make[2]: *** [cmTC_bca9c] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_bca9c/fast' failed
+make[1]: *** [cmTC_bca9c/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_ffd06/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_ffd06.dir/build.make CMakeFiles/cmTC_ffd06.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ffd06.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_ffd06.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_ffd06
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ffd06.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_ffd06.dir/src.c.o -o cmTC_ffd06 
+CMakeFiles/cmTC_ffd06.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_ffd06.dir/build.make:98: recipe for target 'cmTC_ffd06' failed
+make[2]: *** [cmTC_ffd06] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_ffd06/fast' failed
+make[1]: *** [cmTC_ffd06/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_db109/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_db109.dir/build.make CMakeFiles/cmTC_db109.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_db109.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_db109.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_db109
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_db109.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_db109.dir/CheckFunctionExists.c.o -o cmTC_db109  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_db109.dir/build.make:98: recipe for target 'cmTC_db109' failed
+make[2]: *** [cmTC_db109] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_db109/fast' failed
+make[1]: *** [cmTC_db109/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_ad58e/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_ad58e.dir/build.make CMakeFiles/cmTC_ad58e.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ad58e.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_ad58e.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_ad58e
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ad58e.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_ad58e.dir/src.c.o -o cmTC_ad58e 
+CMakeFiles/cmTC_ad58e.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_ad58e.dir/build.make:98: recipe for target 'cmTC_ad58e' failed
+make[2]: *** [cmTC_ad58e] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_ad58e/fast' failed
+make[1]: *** [cmTC_ad58e/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_d2b25/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_d2b25.dir/build.make CMakeFiles/cmTC_d2b25.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d2b25.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_d2b25.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_d2b25
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d2b25.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_d2b25.dir/CheckFunctionExists.c.o -o cmTC_d2b25  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_d2b25.dir/build.make:98: recipe for target 'cmTC_d2b25' failed
+make[2]: *** [cmTC_d2b25] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_d2b25/fast' failed
+make[1]: *** [cmTC_d2b25/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_0dbe4/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_0dbe4.dir/build.make CMakeFiles/cmTC_0dbe4.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0dbe4.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_0dbe4.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_0dbe4
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0dbe4.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_0dbe4.dir/src.c.o -o cmTC_0dbe4 
+CMakeFiles/cmTC_0dbe4.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_0dbe4.dir/build.make:98: recipe for target 'cmTC_0dbe4' failed
+make[2]: *** [cmTC_0dbe4] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_0dbe4/fast' failed
+make[1]: *** [cmTC_0dbe4/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_e2f42/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_e2f42.dir/build.make CMakeFiles/cmTC_e2f42.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e2f42.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_e2f42.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e2f42
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e2f42.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_e2f42.dir/CheckFunctionExists.c.o -o cmTC_e2f42  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_e2f42.dir/build.make:98: recipe for target 'cmTC_e2f42' failed
+make[2]: *** [cmTC_e2f42] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_e2f42/fast' failed
+make[1]: *** [cmTC_e2f42/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_07f58/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_07f58.dir/build.make CMakeFiles/cmTC_07f58.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_07f58.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_07f58.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_07f58
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_07f58.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_07f58.dir/src.c.o -o cmTC_07f58 
+CMakeFiles/cmTC_07f58.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_07f58.dir/build.make:98: recipe for target 'cmTC_07f58' failed
+make[2]: *** [cmTC_07f58] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_07f58/fast' failed
+make[1]: *** [cmTC_07f58/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_20cc7/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_20cc7.dir/build.make CMakeFiles/cmTC_20cc7.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_20cc7.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_20cc7.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_20cc7
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_20cc7.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_20cc7.dir/CheckFunctionExists.c.o -o cmTC_20cc7  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_20cc7.dir/build.make:98: recipe for target 'cmTC_20cc7' failed
+make[2]: *** [cmTC_20cc7] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_20cc7/fast' failed
+make[1]: *** [cmTC_20cc7/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_40772/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_40772.dir/build.make CMakeFiles/cmTC_40772.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_40772.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_40772.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_40772
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_40772.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_40772.dir/src.c.o -o cmTC_40772 
+CMakeFiles/cmTC_40772.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_40772.dir/build.make:98: recipe for target 'cmTC_40772' failed
+make[2]: *** [cmTC_40772] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_40772/fast' failed
+make[1]: *** [cmTC_40772/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_f189e/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_f189e.dir/build.make CMakeFiles/cmTC_f189e.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f189e.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_f189e.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_f189e
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f189e.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_f189e.dir/CheckFunctionExists.c.o -o cmTC_f189e  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_f189e.dir/build.make:98: recipe for target 'cmTC_f189e' failed
+make[2]: *** [cmTC_f189e] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_f189e/fast' failed
+make[1]: *** [cmTC_f189e/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_1ad37/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_1ad37.dir/build.make CMakeFiles/cmTC_1ad37.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1ad37.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_1ad37.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_1ad37
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1ad37.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_1ad37.dir/src.c.o -o cmTC_1ad37 
+CMakeFiles/cmTC_1ad37.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_1ad37.dir/build.make:98: recipe for target 'cmTC_1ad37' failed
+make[2]: *** [cmTC_1ad37] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_1ad37/fast' failed
+make[1]: *** [cmTC_1ad37/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_30ffa/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_30ffa.dir/build.make CMakeFiles/cmTC_30ffa.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_30ffa.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_30ffa.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_30ffa
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_30ffa.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_30ffa.dir/CheckFunctionExists.c.o -o cmTC_30ffa  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_30ffa.dir/build.make:98: recipe for target 'cmTC_30ffa' failed
+make[2]: *** [cmTC_30ffa] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_30ffa/fast' failed
+make[1]: *** [cmTC_30ffa/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_252f5/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_252f5.dir/build.make CMakeFiles/cmTC_252f5.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_252f5.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_252f5.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_252f5
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_252f5.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_252f5.dir/src.c.o -o cmTC_252f5 
+CMakeFiles/cmTC_252f5.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_252f5.dir/build.make:98: recipe for target 'cmTC_252f5' failed
+make[2]: *** [cmTC_252f5] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_252f5/fast' failed
+make[1]: *** [cmTC_252f5/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_0796f/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_0796f.dir/build.make CMakeFiles/cmTC_0796f.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0796f.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_0796f.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_0796f
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0796f.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_0796f.dir/CheckFunctionExists.c.o -o cmTC_0796f  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_0796f.dir/build.make:98: recipe for target 'cmTC_0796f' failed
+make[2]: *** [cmTC_0796f] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_0796f/fast' failed
+make[1]: *** [cmTC_0796f/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_fe580/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_fe580.dir/build.make CMakeFiles/cmTC_fe580.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fe580.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_fe580.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_fe580
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fe580.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_fe580.dir/src.c.o -o cmTC_fe580 
+CMakeFiles/cmTC_fe580.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_fe580.dir/build.make:98: recipe for target 'cmTC_fe580' failed
+make[2]: *** [cmTC_fe580] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_fe580/fast' failed
+make[1]: *** [cmTC_fe580/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_1f224/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_1f224.dir/build.make CMakeFiles/cmTC_1f224.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1f224.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_1f224.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_1f224
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1f224.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_1f224.dir/CheckFunctionExists.c.o -o cmTC_1f224  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_1f224.dir/build.make:98: recipe for target 'cmTC_1f224' failed
+make[2]: *** [cmTC_1f224] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_1f224/fast' failed
+make[1]: *** [cmTC_1f224/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_e9f35/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_e9f35.dir/build.make CMakeFiles/cmTC_e9f35.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e9f35.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_e9f35.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_e9f35
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e9f35.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_e9f35.dir/src.c.o -o cmTC_e9f35 
+CMakeFiles/cmTC_e9f35.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_e9f35.dir/build.make:98: recipe for target 'cmTC_e9f35' failed
+make[2]: *** [cmTC_e9f35] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_e9f35/fast' failed
+make[1]: *** [cmTC_e9f35/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_0d900/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_0d900.dir/build.make CMakeFiles/cmTC_0d900.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0d900.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_0d900.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_0d900
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0d900.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_0d900.dir/CheckFunctionExists.c.o -o cmTC_0d900  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_0d900.dir/build.make:98: recipe for target 'cmTC_0d900' failed
+make[2]: *** [cmTC_0d900] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_0d900/fast' failed
+make[1]: *** [cmTC_0d900/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_857db/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_857db.dir/build.make CMakeFiles/cmTC_857db.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_857db.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_857db.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_857db
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_857db.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_857db.dir/src.c.o -o cmTC_857db 
+CMakeFiles/cmTC_857db.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_857db.dir/build.make:98: recipe for target 'cmTC_857db' failed
+make[2]: *** [cmTC_857db] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_857db/fast' failed
+make[1]: *** [cmTC_857db/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_52e8b/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_52e8b.dir/build.make CMakeFiles/cmTC_52e8b.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_52e8b.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_52e8b.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_52e8b
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_52e8b.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_52e8b.dir/CheckFunctionExists.c.o -o cmTC_52e8b  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_52e8b.dir/build.make:98: recipe for target 'cmTC_52e8b' failed
+make[2]: *** [cmTC_52e8b] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_52e8b/fast' failed
+make[1]: *** [cmTC_52e8b/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_65eda/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_65eda.dir/build.make CMakeFiles/cmTC_65eda.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_65eda.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_65eda.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_65eda
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_65eda.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_65eda.dir/src.c.o -o cmTC_65eda 
+CMakeFiles/cmTC_65eda.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_65eda.dir/build.make:98: recipe for target 'cmTC_65eda' failed
+make[2]: *** [cmTC_65eda] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_65eda/fast' failed
+make[1]: *** [cmTC_65eda/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_ed2bd/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_ed2bd.dir/build.make CMakeFiles/cmTC_ed2bd.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ed2bd.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_ed2bd.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ed2bd
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ed2bd.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_ed2bd.dir/CheckFunctionExists.c.o -o cmTC_ed2bd  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_ed2bd.dir/build.make:98: recipe for target 'cmTC_ed2bd' failed
+make[2]: *** [cmTC_ed2bd] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_ed2bd/fast' failed
+make[1]: *** [cmTC_ed2bd/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_cb1d2/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_cb1d2.dir/build.make CMakeFiles/cmTC_cb1d2.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cb1d2.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_cb1d2.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_cb1d2
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cb1d2.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_cb1d2.dir/src.c.o -o cmTC_cb1d2 
+CMakeFiles/cmTC_cb1d2.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_cb1d2.dir/build.make:98: recipe for target 'cmTC_cb1d2' failed
+make[2]: *** [cmTC_cb1d2] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_cb1d2/fast' failed
+make[1]: *** [cmTC_cb1d2/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_72aff/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_72aff.dir/build.make CMakeFiles/cmTC_72aff.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_72aff.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_72aff.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_72aff
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_72aff.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_72aff.dir/CheckFunctionExists.c.o -o cmTC_72aff  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_72aff.dir/build.make:98: recipe for target 'cmTC_72aff' failed
+make[2]: *** [cmTC_72aff] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_72aff/fast' failed
+make[1]: *** [cmTC_72aff/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_20bf5/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_20bf5.dir/build.make CMakeFiles/cmTC_20bf5.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_20bf5.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_20bf5.dir/src.c.o -c /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_20bf5
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_20bf5.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_20bf5.dir/src.c.o -o cmTC_20bf5 
+CMakeFiles/cmTC_20bf5.dir/src.c.o: In function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+src.c:(.text+0x4a): undefined reference to `pthread_detach'
+src.c:(.text+0x56): undefined reference to `pthread_cancel'
+src.c:(.text+0x67): undefined reference to `pthread_join'
+src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_20bf5.dir/build.make:98: recipe for target 'cmTC_20bf5' failed
+make[2]: *** [cmTC_20bf5] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_20bf5/fast' failed
+make[1]: *** [cmTC_20bf5/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_639fc/fast && make[1]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+/usr/bin/make  -f CMakeFiles/cmTC_639fc.dir/build.make CMakeFiles/cmTC_639fc.dir/build
+make[2]: Entering directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_639fc.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_639fc.dir/CheckFunctionExists.c.o -c /usr/local/lib/python3.5/dist-packages/cmake/data/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_639fc
+/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_639fc.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_639fc.dir/CheckFunctionExists.c.o -o cmTC_639fc  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_639fc.dir/build.make:98: recipe for target 'cmTC_639fc' failed
+make[2]: *** [cmTC_639fc] Error 1
+make[2]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_639fc/fast' failed
+make[1]: *** [cmTC_639fc/fast] Error 2
+make[1]: Leaving directory '/share/Method/my_lidar2camera/manual_calib/build/CMakeFiles/CMakeTmp'
+
+
+

@@ -1,0 +1,7 @@
+/home/jlurobot/Desktop/My Project/ICP/show/build/CMakeFiles/install/strip.dir
+/home/jlurobot/Desktop/My Project/ICP/show/build/CMakeFiles/edit_cache.dir
+/home/jlurobot/Desktop/My Project/ICP/show/build/CMakeFiles/install.dir
+/home/jlurobot/Desktop/My Project/ICP/show/build/CMakeFiles/rebuild_cache.dir
+/home/jlurobot/Desktop/My Project/ICP/show/build/CMakeFiles/show.dir
+/home/jlurobot/Desktop/My Project/ICP/show/build/CMakeFiles/list_install_components.dir
+/home/jlurobot/Desktop/My Project/ICP/show/build/CMakeFiles/install/local.dir
