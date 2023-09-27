@@ -44,7 +44,7 @@ source NDT_Move_Data.sh
 # First, remove the points with incorrect selection in target_points.txt and input_points.txt, then use "source Evaluate.sh". Using the selected points from two point clouds, calculate the center of the circle and the normal vector, and calculate the angle error and distance error
 source Evaluate.sh
 # Visualization results
-source ICP_Pic.sh
+source NDT_Pic.sh
 ```
 
 ## Data
